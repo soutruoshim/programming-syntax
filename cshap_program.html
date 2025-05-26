@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C# Programming Cheatsheet</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      table, pre {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>C# Programming Cheatsheet</h1>
+
+  <section>
+    <h2>1. Basic Structure</h2>
+    <pre><code class="language-csharp">using System;
+
+class Program {
+    static void Main() {
+        Console.WriteLine("Hello, World!");
+    }
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>2. Data Types</h2>
+    <table>
+      <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+      <tr><td>int</td><td>Integer</td><td><code>int x = 10;</code></td></tr>
+      <tr><td>float</td><td>Single-precision float</td><td><code>float pi = 3.14f;</code></td></tr>
+      <tr><td>double</td><td>Double-precision float</td><td><code>double e = 2.718;</code></td></tr>
+      <tr><td>char</td><td>Character</td><td><code>char c = 'A';</code></td></tr>
+      <tr><td>bool</td><td>Boolean</td><td><code>bool isReady = true;</code></td></tr>
+      <tr><td>string</td><td>String of characters</td><td><code>string name = "Alice";</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Operators</h2>
+    <p><strong>Arithmetic:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></p>
+    <p><strong>Comparison:</strong> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></p>
+    <p><strong>Logical:</strong> <code>&&</code>, <code>||</code>, <code>!</code></p>
+    <p><strong>Bitwise:</strong> <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></p>
+    <p><strong>Assignment:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</p>
+  </section>
+
+  <section>
+    <h2>4. Control Flow</h2>
+    <pre><code class="language-csharp">int x = 5;
+
+if (x &gt; 0) {
+    Console.WriteLine("Positive");
+} else {
+    Console.WriteLine("Non-positive");
+}</code></pre>
+
+    <pre><code class="language-csharp">for (int i = 0; i &lt; 3; i++) {
+    Console.WriteLine(i);
+}
+
+int j = 0;
+while (j &lt; 3) {
+    Console.WriteLine(j);
+    j++;
+}
+
+do {
+    Console.WriteLine(j);
+    j++;
+} while (j &lt; 6);</code></pre>
+  </section>
+
+  <section>
+    <h2>5. Methods</h2>
+    <pre><code class="language-csharp">int Add(int a, int b) {
+    return a + b;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>6. Classes and Objects</h2>
+    <pre><code class="language-csharp">class Samurai {
+    public string Name;
+    public int Level;
+
+    public void Introduce() {
+        Console.WriteLine($"I am {Name}, level {Level}");
+    }
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>7. Lists and Dictionaries</h2>
+    <pre><code class="language-csharp">using System.Collections.Generic;
+
+List&lt;int&gt; numbers = new List&lt;int&gt;() {1, 2, 3};
+Dictionary&lt;string, int&gt; ages = new Dictionary&lt;string, int&gt;();
+ages["Alice"] = 25;</code></pre>
+  </section>
+
+  <section>
+    <h2>8. File I/O</h2>
+    <pre><code class="language-csharp">using System.IO;
+
+File.WriteAllText("file.txt", "Hello File!");
+string text = File.ReadAllText("file.txt");
+Console.WriteLine(text);</code></pre>
+  </section>
+
+  <section>
+    <h2>9. Exception Handling</h2>
+    <pre><code class="language-csharp">try {
+    int result = 10 / 0;
+} catch (DivideByZeroException e) {
+    Console.WriteLine("Cannot divide by zero.");
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>10. Memory Management</h2>
+    <pre><code class="language-csharp">// C# uses garbage collection automatically
+MyClass obj = new MyClass();
+obj = null; // eligible for garbage collection</code></pre>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+</body>
+</html>

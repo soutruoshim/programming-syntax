@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ Programming Cheatsheet</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      table, pre {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>C++ Programming Cheatsheet</h1>
+
+  <section>
+    <h2>1. Basic Structure</h2>
+    <pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>2. Data Types</h2>
+    <table>
+      <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+      <tr><td>int</td><td>Integer</td><td><code>int x = 10;</code></td></tr>
+      <tr><td>float</td><td>Floating point</td><td><code>float pi = 3.14f;</code></td></tr>
+      <tr><td>double</td><td>Double precision</td><td><code>double e = 2.71828;</code></td></tr>
+      <tr><td>char</td><td>Character</td><td><code>char ch = 'A';</code></td></tr>
+      <tr><td>bool</td><td>Boolean</td><td><code>bool flag = true;</code></td></tr>
+      <tr><td>string</td><td>String (from &lt;string&gt;)</td><td><code>string name = "Alice";</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Operators</h2>
+    <p><strong>Arithmetic:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></p>
+    <p><strong>Relational:</strong> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></p>
+    <p><strong>Logical:</strong> <code>&&</code>, <code>||</code>, <code>!</code></p>
+    <p><strong>Bitwise:</strong> <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></p>
+    <p><strong>Assignment:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</p>
+    <p><strong>Increment/Decrement:</strong> <code>++</code>, <code>--</code></p>
+  </section>
+
+  <section>
+    <h2>4. Control Flow</h2>
+    <pre><code class="language-cpp">if (x &gt; 10) {
+    cout &lt;&lt; "Greater than 10";
+} else {
+    cout &lt;&lt; "10 or less";
+}</code></pre>
+
+    <pre><code class="language-cpp">for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; i &lt;&lt; endl;
+}
+
+int j = 0;
+while (j &lt; 5) {
+    cout &lt;&lt; j++ &lt;&lt; endl;
+}
+
+do {
+    cout &lt;&lt; j++ &lt;&lt; endl;
+} while (j &lt; 10);</code></pre>
+  </section>
+
+  <section>
+    <h2>5. Functions</h2>
+    <pre><code class="language-cpp">int add(int a, int b) {
+    return a + b;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>6. Classes and Objects</h2>
+    <pre><code class="language-cpp">class Samurai {
+public:
+    string name;
+    int level;
+
+    void introduce() {
+        cout &lt;&lt; "I am " &lt;&lt; name &lt;&lt; ", level " &lt;&lt; level &lt;&lt; endl;
+    }
+};</code></pre>
+  </section>
+
+  <section>
+    <h2>7. Standard Template Library (STL)</h2>
+    <pre><code class="language-cpp">#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;algorithm&gt;
+
+vector&lt;int&gt; nums = {1, 2, 3};
+map&lt;string, int&gt; ageMap;
+ageMap["Alice"] = 30;
+sort(nums.begin(), nums.end());</code></pre>
+  </section>
+
+  <section>
+    <h2>8. File I/O</h2>
+    <pre><code class="language-cpp">#include &lt;fstream&gt;
+
+ofstream fout("output.txt");
+fout &lt;&lt; "Hello File!";
+fout.close();
+
+ifstream fin("output.txt");
+string line;
+getline(fin, line);
+cout &lt;&lt; line;
+fin.close();</code></pre>
+  </section>
+
+  <section>
+    <h2>9. Pointers and References</h2>
+    <pre><code class="language-cpp">int x = 5;
+int* p = &x;
+int& ref = x;
+cout &lt;&lt; *p &lt;&lt; ", " &lt;&lt; ref;</code></pre>
+  </section>
+
+  <section>
+    <h2>10. Memory Management</h2>
+    <pre><code class="language-cpp">int* ptr = new int;
+*ptr = 10;
+delete ptr;</code></pre>
+  </section>
+
+  <!-- PrismJS Syntax Highlighting Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+</body>
+</html>

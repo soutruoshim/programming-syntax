@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming Cheatsheet</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      table, pre {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>C Programming Cheatsheet</h1>
+
+  <section>
+    <h2>1. Basic Structure</h2>
+    <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>2. Data Types</h2>
+    <table>
+      <tr><th>Type</th><th>Size (Typical)</th><th>Example</th></tr>
+      <tr><td>int</td><td>4 bytes</td><td><code>int a = 10;</code></td></tr>
+      <tr><td>float</td><td>4 bytes</td><td><code>float b = 5.5;</code></td></tr>
+      <tr><td>double</td><td>8 bytes</td><td><code>double c = 3.1415;</code></td></tr>
+      <tr><td>char</td><td>1 byte</td><td><code>char ch = 'A';</code></td></tr>
+      <tr><td>void</td><td>0 bytes</td><td><code>void func();</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Operators</h2>
+    <p><strong>Arithmetic:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></p>
+    <p><strong>Relational:</strong> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></p>
+    <p><strong>Logical:</strong> <code>&&</code>, <code>||</code>, <code>!</code></p>
+    <p><strong>Bitwise:</strong> <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></p>
+    <p><strong>Assignment:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</p>
+    <p><strong>Increment/Decrement:</strong> <code>++</code>, <code>--</code></p>
+  </section>
+
+  <section>
+    <h2>4. Control Statements</h2>
+    <pre><code class="language-c">if (a &gt; b) {
+    printf("a is greater\n");
+} else {
+    printf("b is greater\n");
+}</code></pre>
+
+    <pre><code class="language-c">for (int i = 0; i &lt; 5; i++) {
+    printf("%d\n", i);
+}
+
+int j = 0;
+while (j &lt; 5) {
+    printf("%d\n", j);
+    j++;
+}
+
+int k = 0;
+do {
+    printf("%d\n", k);
+    k++;
+} while (k &lt; 5);</code></pre>
+  </section>
+
+  <section>
+    <h2>5. Functions</h2>
+    <pre><code class="language-c">int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    printf("%d", add(3, 4));
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>6. Arrays</h2>
+    <pre><code class="language-c">int arr[3] = {1, 2, 3};
+printf("%d", arr[0]);</code></pre>
+
+    <pre><code class="language-c">int matrix[2][2] = {{1, 2}, {3, 4}};
+printf("%d", matrix[1][1]);</code></pre>
+  </section>
+
+  <section>
+    <h2>7. Strings</h2>
+    <pre><code class="language-c">char str[] = "Hello";
+printf("%s", str);</code></pre>
+
+    <p><strong>Common Functions:</strong></p>
+    <ul>
+      <li><code>strlen(str)</code></li>
+      <li><code>strcpy(dest, src)</code></li>
+      <li><code>strcmp(str1, str2)</code></li>
+      <li><code>strcat(str1, str2)</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Pointers</h2>
+    <pre><code class="language-c">int a = 10;
+int *p = &a;
+printf("%d", *p);</code></pre>
+  </section>
+
+  <section>
+    <h2>9. Structures</h2>
+    <pre><code class="language-c">struct Person {
+    char name[20];
+    int age;
+};
+
+struct Person p1 = {"Alice", 25};
+printf("%s", p1.name);</code></pre>
+  </section>
+
+  <section>
+    <h2>10. File I/O</h2>
+    <pre><code class="language-c">FILE *fp = fopen("file.txt", "w");
+fprintf(fp, "Hello File!");
+fclose(fp);</code></pre>
+
+    <pre><code class="language-c">char buffer[100];
+FILE *fp = fopen("file.txt", "r");
+fgets(buffer, 100, fp);
+printf("%s", buffer);
+fclose(fp);</code></pre>
+  </section>
+
+  <section>
+    <h2>11. Dynamic Memory Allocation</h2>
+    <pre><code class="language-c">int *ptr = (int *)malloc(5 * sizeof(int));
+ptr[0] = 10;
+free(ptr);</code></pre>
+  </section>
+
+  <section>
+    <h2>12. Preprocessor Directives</h2>
+    <pre><code class="language-c">#define PI 3.14
+#define MAX(a, b) ((a) &gt; (b) ? (a) : (b))</code></pre>
+  </section>
+
+  <section>
+    <h2>13. Recursion</h2>
+    <pre><code class="language-c">int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+}</code></pre>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+</body>
+</html>

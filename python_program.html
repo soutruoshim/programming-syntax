@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Programming Cheatsheet</title>
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      table, pre {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Python Programming Cheatsheet</h1>
+
+  <section>
+    <h2>1. Basic Syntax</h2>
+    <pre><code class="language-python">print("Hello, World!")</code></pre>
+  </section>
+
+  <section>
+    <h2>2. Variables and Data Types</h2>
+    <table>
+      <tr><th>Type</th><th>Example</th></tr>
+      <tr><td>int</td><td><code>x = 10</code></td></tr>
+      <tr><td>float</td><td><code>pi = 3.14</code></td></tr>
+      <tr><td>str</td><td><code>name = "Alice"</code></td></tr>
+      <tr><td>bool</td><td><code>flag = True</code></td></tr>
+      <tr><td>list</td><td><code>nums = [1, 2, 3]</code></td></tr>
+      <tr><td>dict</td><td><code>person = {"name": "Bob"}</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Operators</h2>
+    <p><strong>Arithmetic:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>**</code>, <code>//</code></p>
+    <p><strong>Comparison:</strong> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></p>
+    <p><strong>Logical:</strong> <code>and</code>, <code>or</code>, <code>not</code></p>
+    <p><strong>Assignment:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</p>
+  </section>
+
+  <section>
+    <h2>4. Control Flow</h2>
+    <pre><code class="language-python">x = 5
+
+if x &gt; 0:
+    print("Positive")
+elif x == 0:
+    print("Zero")
+else:
+    print("Negative")</code></pre>
+
+    <pre><code class="language-python">for i in range(3):
+    print(i)
+
+j = 0
+while j &lt; 3:
+    print(j)
+    j += 1</code></pre>
+  </section>
+
+  <section>
+    <h2>5. Functions</h2>
+    <pre><code class="language-python">def add(a, b):
+    return a + b
+
+print(add(3, 4))</code></pre>
+  </section>
+
+  <section>
+    <h2>6. Classes and Objects</h2>
+    <pre><code class="language-python">class Samurai:
+    def __init__(self, name, level):
+        self.name = name
+        self.level = level
+
+    def introduce(self):
+        print(f"I am {self.name}, level {self.level}")</code></pre>
+  </section>
+
+  <section>
+    <h2>7. Lists and Dictionaries</h2>
+    <pre><code class="language-python">numbers = [1, 2, 3]
+print(numbers[0])
+
+ages = {"Alice": 25, "Bob": 30}
+print(ages["Alice"])</code></pre>
+  </section>
+
+  <section>
+    <h2>8. File I/O</h2>
+    <pre><code class="language-python">with open("file.txt", "w") as f:
+    f.write("Hello File!")
+
+with open("file.txt", "r") as f:
+    text = f.read()
+    print(text)</code></pre>
+  </section>
+
+  <section>
+    <h2>9. Exception Handling</h2>
+    <pre><code class="language-python">try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")</code></pre>
+  </section>
+
+  <section>
+    <h2>10. Modules and Imports</h2>
+    <pre><code class="language-python">import math
+print(math.sqrt(16))</code></pre>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      Prism.highlightAll();
+    });
+  </script>
+</body>
+</html>
