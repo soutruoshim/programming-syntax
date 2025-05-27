@@ -1,0 +1,142 @@
+[
+  {
+    "title": "C programming",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/c"
+  },
+  {
+    "title": "C++",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/cpp"
+  },
+  {
+    "title": "Java",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/java"
+  },
+  {
+    "title": "Python",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/python"
+  },
+  {
+    "title": "JavaScript",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/javascript"
+  },
+  {
+    "title": "Go",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/go"
+  },
+  {
+    "title": "Rust",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/rust"
+  },
+  {
+    "title": "Kotlin",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/kotlin"
+  },
+  {
+    "title": "Swift",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/swift"
+  },
+  {
+    "title": "PHP",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/php"
+  },
+  {
+    "title": "Ruby",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/ruby"
+  },
+  {
+    "title": "TypeScript",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet with syntax",
+    "url": "https://example.github.io/typescript"
+  },
+  {
+    "title": "SQL",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Basic syntax for queries",
+    "url": "https://example.github.io/sql"
+  },
+  {
+    "title": "Shell Script (Bash)",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Common commands and loops",
+    "url": "https://example.github.io/bash"
+  },
+  {
+    "title": "MATLAB",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Matrix and plotting syntax",
+    "url": "https://example.github.io/matlab"
+  },
+  {
+    "title": "Dart",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Cheatsheet for Flutter devs",
+    "url": "https://example.github.io/dart"
+  },
+  {
+    "title": "Assembly",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Low-level syntax overview",
+    "url": "https://example.github.io/assembly"
+  },
+  {
+    "title": "R",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Stats and plots cheatsheet",
+    "url": "https://example.github.io/r"
+  },
+  {
+    "title": "Perl",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Basic syntax and file handling",
+    "url": "https://example.github.io/perl"
+  },
+  {
+    "title": "Scala",
+    "level": "Beginner",
+    "indicatorValue": 0.0,
+    "content": "Functional programming syntax",
+    "url": "https://example.github.io/scala"
+  }
+]

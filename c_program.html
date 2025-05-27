@@ -1,217 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>C Programming Cheatsheet</title>
-  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    h1, h2 {
-      color: #2c3e50;
-    }
-
-    pre {
-      background: #272822;
-      color: #f8f8f2;
-      padding: 1em;
-      border-radius: 5px;
-      overflow-x: auto;
-    }
-
-    code {
-      font-family: Consolas, monospace;
-      font-size: 0.95em;
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      overflow-x: auto;
-      display: block;
-    }
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
-      text-align: left;
-      white-space: nowrap;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        margin: 10px;
-        font-size: 16px;
-      }
-
-      table, pre {
-        font-size: 14px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Cheat Sheet</title>
+    <!-- Highlight.js CDN -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        pre {
+            overflow-x: auto;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+        code {
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            table, pre { font-size: 12px; }
+        }
+    </style>
 </head>
 <body>
-  <h1>C Programming Cheatsheet</h1>
 
-  <section>
-    <h2>1. Basic Structure</h2>
-    <pre><code class="language-c">#include &lt;stdio.h&gt;
+<h1>C Programming Cheat Sheet</h1>
+
+<h2>Basic Structure</h2>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main() {
     printf("Hello, World!\n");
     return 0;
 }</code></pre>
-  </section>
 
-  <section>
-    <h2>2. Data Types</h2>
-    <table>
-      <tr><th>Type</th><th>Size (Typical)</th><th>Example</th></tr>
-      <tr><td>int</td><td>4 bytes</td><td><code>int a = 10;</code></td></tr>
-      <tr><td>float</td><td>4 bytes</td><td><code>float b = 5.5;</code></td></tr>
-      <tr><td>double</td><td>8 bytes</td><td><code>double c = 3.1415;</code></td></tr>
-      <tr><td>char</td><td>1 byte</td><td><code>char ch = 'A';</code></td></tr>
-      <tr><td>void</td><td>0 bytes</td><td><code>void func();</code></td></tr>
-    </table>
-  </section>
+<h2>Compiling and Running</h2>
+<pre><code class="language-bash">gcc program.c -o program
+./program</code></pre>
 
-  <section>
-    <h2>3. Operators</h2>
-    <p><strong>Arithmetic:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></p>
-    <p><strong>Relational:</strong> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></p>
-    <p><strong>Logical:</strong> <code>&&</code>, <code>||</code>, <code>!</code></p>
-    <p><strong>Bitwise:</strong> <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></p>
-    <p><strong>Assignment:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</p>
-    <p><strong>Increment/Decrement:</strong> <code>++</code>, <code>--</code></p>
-  </section>
+<h2>Data Types & Specifiers</h2>
+<table>
+<tr><th>Type</th><th>Specifier</th><th>Example</th></tr>
+<tr><td>int</td><td>%d</td><td><code>int num = 5;</code></td></tr>
+<tr><td>float</td><td>%f</td><td><code>float f = 5.5;</code></td></tr>
+<tr><td>char</td><td>%c</td><td><code>char c = 'A';</code></td></tr>
+<tr><td>double</td><td>%lf</td><td><code>double d = 10.5;</code></td></tr>
+</table>
 
-  <section>
-    <h2>4. Control Statements</h2>
-    <pre><code class="language-c">if (a &gt; b) {
-    printf("a is greater\n");
-} else {
-    printf("b is greater\n");
+<h2>Operators</h2>
+<pre><code class="language-c">int sum = a + b;
+int mod = a % b;</code></pre>
+
+<h2>Control Structures</h2>
+<h3>if-else</h3>
+<pre><code class="language-c">if(score &gt;= 60)
+    printf("Pass");
+else
+    printf("Fail");</code></pre>
+
+<h3>for-loop</h3>
+<pre><code class="language-c">for(int i = 0; i &lt; 10; i++)
+    printf("%d\n", i);</code></pre>
+
+<h2>Arrays & Strings</h2>
+<pre><code class="language-c">int nums[3] = {1,2,3};
+char str[] = "Hello";</code></pre>
+
+<h2>Functions</h2>
+<pre><code class="language-c">int add(int x, int y) {
+    return x + y;
 }</code></pre>
 
-    <pre><code class="language-c">for (int i = 0; i &lt; 5; i++) {
-    printf("%d\n", i);
-}
+<h2>Pointers</h2>
+<pre><code class="language-c">int x = 10;
+int *ptr = &x;</code></pre>
 
-int j = 0;
-while (j &lt; 5) {
-    printf("%d\n", j);
-    j++;
-}
-
-int k = 0;
-do {
-    printf("%d\n", k);
-    k++;
-} while (k &lt; 5);</code></pre>
-  </section>
-
-  <section>
-    <h2>5. Functions</h2>
-    <pre><code class="language-c">int add(int a, int b) {
-    return a + b;
-}
-
-int main() {
-    printf("%d", add(3, 4));
-}</code></pre>
-  </section>
-
-  <section>
-    <h2>6. Arrays</h2>
-    <pre><code class="language-c">int arr[3] = {1, 2, 3};
-printf("%d", arr[0]);</code></pre>
-
-    <pre><code class="language-c">int matrix[2][2] = {{1, 2}, {3, 4}};
-printf("%d", matrix[1][1]);</code></pre>
-  </section>
-
-  <section>
-    <h2>7. Strings</h2>
-    <pre><code class="language-c">char str[] = "Hello";
-printf("%s", str);</code></pre>
-
-    <p><strong>Common Functions:</strong></p>
-    <ul>
-      <li><code>strlen(str)</code></li>
-      <li><code>strcpy(dest, src)</code></li>
-      <li><code>strcmp(str1, str2)</code></li>
-      <li><code>strcat(str1, str2)</code></li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>8. Pointers</h2>
-    <pre><code class="language-c">int a = 10;
-int *p = &a;
-printf("%d", *p);</code></pre>
-  </section>
-
-  <section>
-    <h2>9. Structures</h2>
-    <pre><code class="language-c">struct Person {
+<h2>Structures</h2>
+<pre><code class="language-c">struct student {
+    int id;
     char name[20];
-    int age;
-};
+};</code></pre>
 
-struct Person p1 = {"Alice", 25};
-printf("%s", p1.name);</code></pre>
-  </section>
+<h2>Dynamic Memory</h2>
+<pre><code class="language-c">int *arr = malloc(5 * sizeof(int));
+free(arr);</code></pre>
 
-  <section>
-    <h2>10. File I/O</h2>
-    <pre><code class="language-c">FILE *fp = fopen("file.txt", "w");
-fprintf(fp, "Hello File!");
+<h2>File I/O</h2>
+<pre><code class="language-c">FILE *fp = fopen("file.txt", "w");
+fprintf(fp, "Hello!");
 fclose(fp);</code></pre>
 
-    <pre><code class="language-c">char buffer[100];
-FILE *fp = fopen("file.txt", "r");
-fgets(buffer, 100, fp);
-printf("%s", buffer);
-fclose(fp);</code></pre>
-  </section>
+<h2>Preprocessor Directives</h2>
+<pre><code class="language-c">#define MAX 100</code></pre>
 
-  <section>
-    <h2>11. Dynamic Memory Allocation</h2>
-    <pre><code class="language-c">int *ptr = (int *)malloc(5 * sizeof(int));
-ptr[0] = 10;
-free(ptr);</code></pre>
-  </section>
+<h2>Common Libraries</h2>
+<ul>
+<li><code>&lt;stdio.h&gt;</code> - I/O functions</li>
+<li><code>&lt;stdlib.h&gt;</code> - Memory functions</li>
+<li><code>&lt;string.h&gt;</code> - String manipulation</li>
+<li><code>&lt;math.h&gt;</code> - Math operations</li>
+</ul>
 
-  <section>
-    <h2>12. Preprocessor Directives</h2>
-    <pre><code class="language-c">#define PI 3.14
-#define MAX(a, b) ((a) &gt; (b) ? (a) : (b))</code></pre>
-  </section>
+<h2>Best Practices</h2>
+<ul>
+<li>Initialize all variables.</li>
+<li>Check return values of functions.</li>
+<li>Free dynamically allocated memory.</li>
+<li>Comment clearly and logically.</li>
+</ul>
 
-  <section>
-    <h2>13. Recursion</h2>
-    <pre><code class="language-c">int factorial(int n) {
-    if (n == 0) return 1;
-    return n * factorial(n - 1);
-}</code></pre>
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
 </body>
 </html>
